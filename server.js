@@ -27,7 +27,7 @@ app.get('/events', function(req, res) {
 
   // Send a message every second
   const intervalId = setInterval(function() {
-    const message = `data: If you see this then the SSE is working on ${port}. The server time is ${new Date().toLocaleTimeString()}\n\n`;
+    const message = `data: If you see this then the SSE is working on. The server time is ${new Date().toLocaleTimeString()}\n\n`;
     res.write(message);
   }, 1000);
 
