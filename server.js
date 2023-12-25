@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 1000;
+
 const cors = require('cors'); // Import the cors package
 
 // Serve static files from the 'public' directory
@@ -36,6 +36,7 @@ app.get('/events', function(req, res) {
 });
 
 // Start the server
+const port = process.env.PORT || 1000;
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
